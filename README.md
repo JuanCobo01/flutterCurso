@@ -29,3 +29,8 @@ El objetivo del taller es implementar una pantalla principal en Flutter con los 
 4. Ejecutar la aplicación:
    ```bash
    flutter run
+
+##  Capturas de pantalla:
+<img width="530" height="862" alt="image" src="https://github.com/user-attachments/assets/325ed282-a426-4f0c-b7ef-e7a5b14d149b" />
+
+   

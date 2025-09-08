@@ -31,7 +31,7 @@ El objetivo del taller es implementar una pantalla principal en Flutter con los 
    flutter run
 
 ## 📷 Capturas de pantalla:
-1. Evidencia de la vista final y cambio de titulo:
+1. Estado inicial y cambio de titulo,2 widgets(Container y ListView):
 <img width="502" height="1009" alt="image" src="https://github.com/user-attachments/assets/fe09fe7b-f752-466a-975d-c4ca1ead9447" />
 <br>
 <br>

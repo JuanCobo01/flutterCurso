@@ -33,7 +33,8 @@ El objetivo del taller es implementar una pantalla principal en Flutter con los 
 ## 📷 Capturas de pantalla:
 1. Evidencia de la vista final:
 <img width="502" height="1009" alt="image" src="https://github.com/user-attachments/assets/fe09fe7b-f752-466a-975d-c4ca1ead9447" />
-<br><br>
+<br>
+<br>
 2. Título cambiado:
 <img width="497" height="1021" alt="image" src="https://github.com/user-attachments/assets/7902d944-0b40-40e7-837f-381202164d26" />
 

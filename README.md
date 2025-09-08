@@ -22,7 +22,7 @@ El objetivo del taller es implementar una pantalla principal en Flutter con los 
    git clone https://github.com/JuanCobo01/flutterCurso.git
 2. Entrar en la carpeta del proyecto:
    ```bash
-   cd flutter_curso
+   cd flutterCurso
 3. Instalar las dependencias:
    ```bash
    flutter pub get

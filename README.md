@@ -1,16 +1,25 @@
-# grupo_2
+# 📱 Taller 1
 
-A new Flutter project.
+## 📌 Descripción
+Este repositorio contiene el desarrollo del **Taller 1** del curso de Flutter.  
+El objetivo del taller es implementar una pantalla principal en Flutter con los siguientes requerimientos:
 
-## Getting Started
+- `AppBar` con un título que puede alternar entre **"Hola, Flutter"** y **"¡Título cambiado!"** usando `setState()`.
+- Texto centrado con el **nombre completo del estudiante**.
+- Imágenes mostradas en un `Row`:  
+  - Una desde **Image.network()**.  
+  - Una desde **Image.asset()** (Formato local).
+- Botón con `ElevatedButton` que cambia el título y muestra un **SnackBar**.
+- Widgets adicionales: `Container` (con bordes y color) y `ListView` (con 4 elementos).
+- Diseño organizado con `Column`, `Padding`, `SizedBox` y alineaciones adecuadas.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## ▶️ Pasos para ejecutar el proyecto
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/JuanCobo01/flutterCurso.git
+   cd flutter_curso
+   flutter pub get
+   flutter run

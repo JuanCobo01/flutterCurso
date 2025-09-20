@@ -1,42 +1,52 @@
-# Flutter Navigation & Widgets Demo
+# 📱 Taller - Paso de Parámetros y Widgets en Flutter
 
-Este proyecto es una práctica de navegación con **GoRouter** en Flutter y la implementación de diferentes **widgets de presentación** como `GridView`, `TabBar` y `ListView`.
+Este proyecto corresponde al taller de **navegación con parámetros, uso de widgets y ciclo de vida en Flutter**, utilizando `go_router` y siguiendo el flujo de trabajo con **GitFlow**.
 
 ---
 
-## 📌 Navegación
+## 🚀 Arquitectura y Navegación
 
-La aplicación utiliza **GoRouter** para definir las rutas y controlar la navegación.  
-Las rutas disponibles son:
+El proyecto está organizado en capas para mantener un código limpio:
 
-- `/` → **HomeScreen** (pantalla de inicio con botones de navegación).
-- `/detalle/:mensaje/:origen` → **DetailScreen** (pantalla de detalle que recibe parámetros desde `go`, `push` y `replace`).
-- `/grid` → **GridTabScreen** (pantalla que combina un `GridView` y un `ListView` con `TabBar`).
-- `/ciclo` → **CicloDeVidaScreen** (pantalla de prueba para ver el ciclo de vida de un widget).
+- **`lib/config/`** → configuración de rutas (`app_router.dart`).
+- **`lib/ui/views/`** → pantallas principales (`HomeScreen`, `DetalleScreen`, `GridTabScreen`, `CicloVidaScreen`).
+- **`lib/ui/widgets/`** → componentes reutilizables como `BaseView`.
 
-### Envío de parámetros
+### 🔀 Rutas Definidas
 
-Los parámetros se envían directamente en la ruta. Ejemplo:
+- `/` → **HomeScreen** (pantalla principal con botones de navegación).
+- `/detalle/:mensaje/:tipo` → **DetalleScreen** (recibe parámetros y los muestra en pantalla).
+- `/grid` → **GridTabScreen** (demuestra uso de GridView y TabBar).
+- `/ciclo` → **CicloVidaScreen** (muestra el ciclo de vida de un StatefulWidget en consola).
+
+### 📌 Paso de Parámetros
+
+Ejemplo:  
+Desde **HomeScreen** se envía un mensaje y el tipo de navegación (go, push o replace) hacia **DetalleScreen**:
 
 ```dart
 context.go('/detalle/Hola desde go/go');
 context.push('/detalle/Hola desde push/push');
 context.replace('/detalle/Hola desde replace/replace');
 
-## ▶️ Pasos para ejecutar el proyecto
+## 🌿 Widgets Usados
 
-1. Clonar el repositorio:
-   ```bash
-   git clone https://github.com/JuanCobo01/flutterCurso.git
-2. Entrar en la carpeta del proyecto:
-   ```bash
-   cd flutterCurso
-3. Instalar las dependencias:
-   ```bash
-   flutter pub get
-4. Ejecutar la aplicación:
-   ```bash
-   flutter run
+### 1. GridView
+Utilizado para mostrar una lista de elementos en forma de cuadrícula.  
+En este caso, se generan tarjetas con colores y texto de ejemplo.  
 
+**Motivo:** facilita la visualización de listas organizadas en varias columnas.
 
-## 🧑‍🎓Juan David Cobo Aguirre / 230221060   
+---
+
+### 2. TabBar + TabBarView
+Se incluyó dentro de `GridTabScreen` para dividir la pantalla en secciones (Ej: "Grid" y "Lista").  
+
+**Motivo:** mejora la organización y experiencia del usuario, permitiendo navegar entre diferentes vistas sin salir de la pantalla.
+
+---
+
+### 3. Card + ListView (widget adicional)
+En la segunda pestaña del `TabBar` se agregó un `ListView` con elementos dentro de `Card`.  
+
+**Motivo:** mostrar un tercer widget en acción, ideal para listas verticales con un diseño más atractivo y moderno.

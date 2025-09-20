@@ -1,45 +1,51 @@
-# 📱 Taller 1
+# 📱 Taller - Paso de Parámetros y Widgets en Flutter
 
-## 📌 Descripción
-Este repositorio contiene el desarrollo del **Taller 1** del curso de Flutter.  
-El objetivo del taller es implementar una pantalla principal en Flutter con los siguientes requerimientos:
-
-- `AppBar` con un título que puede alternar entre **"Hola, Flutter"** y **"¡Título cambiado!"** usando `setState()`.
-- Texto centrado con el **nombre completo del estudiante**.
-- Imágenes mostradas en un `Row`:  
-  - Una desde **Image.network()**.  
-  - Una desde **Image.asset()** (Formato local).
-- Botón con `ElevatedButton` que cambia el título y muestra un **SnackBar**.
-- Widgets adicionales: `Container` (con bordes y color) y `ListView` (con 4 elementos).
-- Diseño organizado con `Column`, `Padding`, `SizedBox` y alineaciones adecuadas.
+Este proyecto corresponde al taller de **navegación con parámetros, uso de widgets y ciclo de vida en Flutter**, utilizando `go_router` y siguiendo el flujo de trabajo con **GitFlow**.
 
 ---
 
-## ▶️ Pasos para ejecutar el proyecto
+## 🚀 Arquitectura y Navegación
 
-1. Clonar el repositorio:
-   ```bash
-   git clone https://github.com/JuanCobo01/flutterCurso.git
-2. Entrar en la carpeta del proyecto:
-   ```bash
-   cd flutterCurso
-3. Instalar las dependencias:
-   ```bash
-   flutter pub get
-4. Ejecutar la aplicación:
-   ```bash
-   flutter run
+El proyecto está organizado en capas para mantener un código limpio:
 
-## 📷 Capturas de pantalla:
-1. Codigo (Estado inicial y cambio de titulo),2 widgets(Container y ListView):
-<img width="701" height="196" alt="image" src="https://github.com/user-attachments/assets/6ab4726c-8739-4c2d-92f3-552a2d403b30" />
-<br>
-<br>
-<img width="502" height="1009" alt="image" src="https://github.com/user-attachments/assets/fe09fe7b-f752-466a-975d-c4ca1ead9447" />
-<br>
-<br>
-<img width="497" height="1021" alt="image" src="https://github.com/user-attachments/assets/7902d944-0b40-40e7-837f-381202164d26" />
+- **`lib/config/`** → configuración de rutas (`app_router.dart`).
+- **`lib/ui/views/`** → pantallas principales (`HomeScreen`, `DetalleScreen`, `GridTabScreen`, `CicloVidaScreen`).
+- **`lib/ui/widgets/`** → componentes reutilizables como `BaseView`.
 
+### 🔀 Rutas Definidas
 
+- `/` → **HomeScreen** (pantalla principal con botones de navegación).
+- `/detalle/:mensaje/:tipo` → **DetalleScreen** (recibe parámetros y los muestra en pantalla).
+- `/grid` → **GridTabScreen** (demuestra uso de GridView y TabBar).
+- `/ciclo` → **CicloVidaScreen** (muestra el ciclo de vida de un StatefulWidget en consola).
 
-## 🧑‍🎓Juan David Cobo Aguirre / 230221060   
+### 📌 Paso de Parámetros
+
+Ejemplo:  
+Desde **HomeScreen** se envía un mensaje y el tipo de navegación (go, push o replace) hacia **DetalleScreen**:
+
+context.go('/detalle/Hola desde go/go');
+context.push('/detalle/Hola desde push/push');
+context.replace('/detalle/Hola desde replace/replace');
+
+## 🌿 Widgets Usados
+
+### 1. GridView
+Utilizado para mostrar una lista de elementos en forma de cuadrícula.  
+En este caso, se generan tarjetas con colores y texto de ejemplo.  
+
+**Motivo:** facilita la visualización de listas organizadas en varias columnas.
+
+---
+
+### 2. TabBar + TabBarView
+Se incluyó dentro de `GridTabScreen` para dividir la pantalla en secciones (Ej: "Grid" y "Lista").  
+
+**Motivo:** mejora la organización y experiencia del usuario, permitiendo navegar entre diferentes vistas sin salir de la pantalla.
+
+---
+
+### 3. Card + ListView (widget adicional)
+En la segunda pestaña del `TabBar` se agregó un `ListView` con elementos dentro de `Card`.  
+
+**Motivo:** mostrar un tercer widget en acción, ideal para listas verticales con un diseño más atractivo y moderno.

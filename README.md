@@ -1,16 +1,45 @@
-# grupo_2
+# 📱 Taller 1
 
-A new Flutter project.
+## 📌 Descripción
+Este repositorio contiene el desarrollo del **Taller 1** del curso de Flutter.  
+El objetivo del taller es implementar una pantalla principal en Flutter con los siguientes requerimientos:
 
-## Getting Started
+- `AppBar` con un título que puede alternar entre **"Hola, Flutter"** y **"¡Título cambiado!"** usando `setState()`.
+- Texto centrado con el **nombre completo del estudiante**.
+- Imágenes mostradas en un `Row`:  
+  - Una desde **Image.network()**.  
+  - Una desde **Image.asset()** (Formato local).
+- Botón con `ElevatedButton` que cambia el título y muestra un **SnackBar**.
+- Widgets adicionales: `Container` (con bordes y color) y `ListView` (con 4 elementos).
+- Diseño organizado con `Column`, `Padding`, `SizedBox` y alineaciones adecuadas.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## ▶️ Pasos para ejecutar el proyecto
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/JuanCobo01/flutterCurso.git
+2. Entrar en la carpeta del proyecto:
+   ```bash
+   cd flutterCurso
+3. Instalar las dependencias:
+   ```bash
+   flutter pub get
+4. Ejecutar la aplicación:
+   ```bash
+   flutter run
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📷 Capturas de pantalla:
+1. Codigo (Estado inicial y cambio de titulo),2 widgets(Container y ListView):
+<img width="701" height="196" alt="image" src="https://github.com/user-attachments/assets/6ab4726c-8739-4c2d-92f3-552a2d403b30" />
+<br>
+<br>
+<img width="502" height="1009" alt="image" src="https://github.com/user-attachments/assets/fe09fe7b-f752-466a-975d-c4ca1ead9447" />
+<br>
+<br>
+<img width="497" height="1021" alt="image" src="https://github.com/user-attachments/assets/7902d944-0b40-40e7-837f-381202164d26" />
+
+
+
+## 🧑‍🎓Juan David Cobo Aguirre / 230221060   

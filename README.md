@@ -1,19 +1,27 @@
-# 📱 Taller 1
+# Flutter Navigation & Widgets Demo
 
-## 📌 Descripción
-Este repositorio contiene el desarrollo del **Taller 1** del curso de Flutter.  
-El objetivo del taller es implementar una pantalla principal en Flutter con los siguientes requerimientos:
-
-- `AppBar` con un título que puede alternar entre **"Hola, Flutter"** y **"¡Título cambiado!"** usando `setState()`.
-- Texto centrado con el **nombre completo del estudiante**.
-- Imágenes mostradas en un `Row`:  
-  - Una desde **Image.network()**.  
-  - Una desde **Image.asset()** (Formato local).
-- Botón con `ElevatedButton` que cambia el título y muestra un **SnackBar**.
-- Widgets adicionales: `Container` (con bordes y color) y `ListView` (con 4 elementos).
-- Diseño organizado con `Column`, `Padding`, `SizedBox` y alineaciones adecuadas.
+Este proyecto es una práctica de navegación con **GoRouter** en Flutter y la implementación de diferentes **widgets de presentación** como `GridView`, `TabBar` y `ListView`.
 
 ---
+
+## 📌 Navegación
+
+La aplicación utiliza **GoRouter** para definir las rutas y controlar la navegación.  
+Las rutas disponibles son:
+
+- `/` → **HomeScreen** (pantalla de inicio con botones de navegación).
+- `/detalle/:mensaje/:origen` → **DetailScreen** (pantalla de detalle que recibe parámetros desde `go`, `push` y `replace`).
+- `/grid` → **GridTabScreen** (pantalla que combina un `GridView` y un `ListView` con `TabBar`).
+- `/ciclo` → **CicloDeVidaScreen** (pantalla de prueba para ver el ciclo de vida de un widget).
+
+### Envío de parámetros
+
+Los parámetros se envían directamente en la ruta. Ejemplo:
+
+```dart
+context.go('/detalle/Hola desde go/go');
+context.push('/detalle/Hola desde push/push');
+context.replace('/detalle/Hola desde replace/replace');
 
 ## ▶️ Pasos para ejecutar el proyecto
 
@@ -29,17 +37,6 @@ El objetivo del taller es implementar una pantalla principal en Flutter con los 
 4. Ejecutar la aplicación:
    ```bash
    flutter run
-
-## 📷 Capturas de pantalla:
-1. Codigo (Estado inicial y cambio de titulo),2 widgets(Container y ListView):
-<img width="701" height="196" alt="image" src="https://github.com/user-attachments/assets/6ab4726c-8739-4c2d-92f3-552a2d403b30" />
-<br>
-<br>
-<img width="502" height="1009" alt="image" src="https://github.com/user-attachments/assets/fe09fe7b-f752-466a-975d-c4ca1ead9447" />
-<br>
-<br>
-<img width="497" height="1021" alt="image" src="https://github.com/user-attachments/assets/7902d944-0b40-40e7-837f-381202164d26" />
-
 
 
 ## 🧑‍🎓Juan David Cobo Aguirre / 230221060   

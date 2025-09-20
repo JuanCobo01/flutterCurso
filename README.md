@@ -24,7 +24,6 @@ El proyecto está organizado en capas para mantener un código limpio:
 Ejemplo:  
 Desde **HomeScreen** se envía un mensaje y el tipo de navegación (go, push o replace) hacia **DetalleScreen**:
 
-```dart
 context.go('/detalle/Hola desde go/go');
 context.push('/detalle/Hola desde push/push');
 context.replace('/detalle/Hola desde replace/replace');

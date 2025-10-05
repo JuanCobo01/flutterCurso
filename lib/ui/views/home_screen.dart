@@ -13,26 +13,21 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
-              onPressed: () => context.go('/detalle/Hola desde go/go'),
-              child: const Text("Ir con GO"),
+            const Text(
+              "Demostración de Asincronía en Flutter",
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
             ),
-            ElevatedButton(
-              onPressed: () => context.push('/detalle/Hola desde push/push'),
-              child: const Text("Ir con PUSH"),
-            ),
-            ElevatedButton(
-              onPressed: () => context.replace('/detalle/Hola desde replace/replace'),
-              child: const Text("Ir con REPLACE"),
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () => context.push('/grid'),
-              child: const Text("Ir a Grid + TabBar"),
-            ),
-            ElevatedButton(
-              onPressed: () => context.push('/ciclo'),
-              child: const Text("Ir al Ciclo de Vida"),
+            const SizedBox(height: 40),
+
+            // Botón para ir a la demo asíncrona
+            ElevatedButton.icon(
+              onPressed: () => context.push('/async'),
+              icon: const Icon(Icons.sync),
+              label: const Text("Ir a Demostración Async / Timer / Isolate"),
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+              ),
             ),
           ],
         ),

@@ -1,8 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class TimerDemo extends StatefulWidget {
   const TimerDemo({super.key});
+
   @override
   State<TimerDemo> createState() => _TimerDemoState();
 }
@@ -55,24 +57,35 @@ class _TimerDemoState extends State<TimerDemo> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-        children: [
-          const SizedBox(height: 20),
-          Text(_format(_milliseconds),
-              style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 20),
-          Wrap(
-            spacing: 8,
-            children: [
-              ElevatedButton(onPressed: _start, child: const Text('Iniciar')),
-              ElevatedButton(onPressed: _pause, child: const Text('Pausar')),
-              ElevatedButton(onPressed: _resume, child: const Text('Reanudar')),
-              ElevatedButton(onPressed: _reset, child: const Text('Reiniciar')),
-            ],
-          ),
-        ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Demo de Timer'),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () => context.go('/'), // 🔙 volver al HomeScreen
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            const SizedBox(height: 20),
+            Text(
+              _format(_milliseconds),
+              style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 20),
+            Wrap(
+              spacing: 8,
+              children: [
+                ElevatedButton(onPressed: _start, child: const Text('Iniciar')),
+                ElevatedButton(onPressed: _pause, child: const Text('Pausar')),
+                ElevatedButton(onPressed: _resume, child: const Text('Reanudar')),
+                ElevatedButton(onPressed: _reset, child: const Text('Reiniciar')),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

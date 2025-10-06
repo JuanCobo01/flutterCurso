@@ -169,5 +169,5 @@ Este código ejecuta una suma pesada en un isolate separado para que la UI no se
    - **Cronómetro** → prueba asincronía con `Timer`.  
    - **Tarea Pesada** → prueba ejecución paralela con `Isolate`.  
 3. Ambas pantallas actualizan la UI en tiempo real **sin bloquear** el hilo principal.
-4. El usuario puede regresar al menú principal en cualquier momento.
+4. El usuario puede regresar al menu principal en cualquier momento.
 ---

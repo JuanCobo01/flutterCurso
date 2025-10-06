@@ -175,3 +175,4 @@ Este código ejecuta una suma pesada en un isolate separado para que la UI no se
 4. El usuario puede regresar al menú principal en cualquier momento.
 
 ---
+<img width="3840" height="2105" alt="image" src="https://github.com/user-attachments/assets/83055233-473d-40ea-ba3b-2b99148433da" />

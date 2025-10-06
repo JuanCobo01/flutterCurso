@@ -20,9 +20,7 @@ Se implementan distintos mecanismos de ejecución asíncrona:
 ## 🧭 Diagrama de pantallas y flujo de navegación
 
 ```
-
-<img width="3840" height="2105" alt="image" src="https://github.com/user-attachments/assets/6130a734-0db1-420f-8dbb-2293a0237220" />
-
+<img width="3840" height="2105" alt="image" src="https://github.com/user-attachments/assets/d7aa108d-5363-4a3d-bff6-c46b488befc2" />
 
 ```
 

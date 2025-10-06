@@ -8,22 +8,44 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
+        padding: EdgeInsets.zero,
         children: [
           const DrawerHeader(
             decoration: BoxDecoration(color: Colors.blue),
-            child: Text("Menú Navegación", style: TextStyle(color: Colors.white)),
+            child: Text(
+              'Menú de Navegación',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+              ),
+            ),
           ),
           ListTile(
-            title: const Text("Home"),
+            leading: const Icon(Icons.home),
+            title: const Text('Inicio'),
             onTap: () => context.go('/'),
           ),
           ListTile(
-            title: const Text("Grid + Tabs"),
-            onTap: () => context.go('/grid'),
+            leading: const Icon(Icons.hourglass_bottom),
+            title: const Text('Demostración Async'),
+            onTap: () => context.push('/async'),
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.timer),
+            title: const Text('Cronómetro'),
+            onTap: () {
+              // en caso de que luego se agregue ruta /timer
+              context.push('/timer');
+            },
           ),
           ListTile(
-            title: const Text("Ciclo de Vida"),
-            onTap: () => context.go('/ciclo'),
+            leading: const Icon(Icons.memory),
+            title: const Text('Tarea Pesada (Isolate)'),
+            onTap: () {
+              // en caso de que luego se agregue ruta /isolate
+              context.push('/isolate');
+            },
           ),
         ],
       ),

@@ -19,10 +19,7 @@ Se implementan distintos mecanismos de ejecución asíncrona:
 
 ## 🧭 Diagrama de pantallas y flujo de navegación
 
-```
 <img width="3840" height="2105" alt="image" src="https://github.com/user-attachments/assets/d7aa108d-5363-4a3d-bff6-c46b488befc2" />
-
-```
 
 ---
 
@@ -173,6 +170,4 @@ Este código ejecuta una suma pesada en un isolate separado para que la UI no se
    - **Tarea Pesada** → prueba ejecución paralela con `Isolate`.  
 3. Ambas pantallas actualizan la UI en tiempo real **sin bloquear** el hilo principal.
 4. El usuario puede regresar al menú principal en cualquier momento.
-
 ---
-<img width="3840" height="2105" alt="image" src="https://github.com/user-attachments/assets/83055233-473d-40ea-ba3b-2b99148433da" />

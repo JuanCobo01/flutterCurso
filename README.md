@@ -17,29 +17,11 @@ Se implementan distintos mecanismos de ejecución asíncrona:
 
 ---
 
-## 🧩 Estructura del proyecto
-
-```
-lib/
-├── config/
-│   └── app_router.dart         # Configuración de rutas con GoRouter
-│
-├── services/
-│   └── heavy_compute.dart      # Función pesada ejecutada en Isolate
-│
-└── ui/
-    └── views/
-        ├── home_screen.dart    # Pantalla principal
-        ├── timer_demo.dart     # Cronómetro (uso de Timer)
-        └── isolate_demo.dart   # Ejemplo de Isolate
-```
-
----
-
 ## 🧭 Diagrama de pantallas y flujo de navegación
 
 ```
 
+<img width="3840" height="2105" alt="image" src="https://github.com/user-attachments/assets/6130a734-0db1-420f-8dbb-2293a0237220" />
 
 
 ```

@@ -128,46 +128,7 @@ version: 1.0.3+4  # Nuevas funcionalidades
 - **PATCH**: Correcciones de bugs o mejoras menores
 - **BUILD_NUMBER**: Siempre incrementar en cada build
 
-#### **Formato de Release Notes Utilizado:**
-```markdown
-🚀 Versión X.X.X - [Título Descriptivo]
-
-📅 FECHA: DD/MM/YYYY
-👨‍💻 RESPONSABLE: [Nombre del desarrollador]
-📦 TAMAÑO: [XX] MB | 📱 COMPATIBILIDAD: Android 5.0+
-
-✨ NUEVAS FUNCIONALIDADES:
-- 🧮 [Funcionalidad 1] - Descripción breve
-- 📝 [Funcionalidad 2] - Descripción breve
-- 🎲 [Funcionalidad 3] - Descripción breve
-
-� MEJORAS TÉCNICAS:
-- [Mejora 1]: Descripción del impacto
-- [Mejora 2]: Beneficio para el usuario
-
-🐛 ERRORES CORREGIDOS:
-- [Bug 1]: Qué se solucionó
-- [Bug 2]: Mejora implementada
-
-🔧 INSTRUCCIONES DE TESTING:
-1. [Paso específico de prueba]
-2. [Funcionalidad a verificar]
-3. [Escenario de error a probar]
-
-📈 COMPARACIÓN CON VERSIÓN ANTERIOR:
-- Funcionalidades: X → Y
-- Pantallas: X → Y
-- Tamaño APK: XX MB → YY MB
-
-🎯 TESTING PRIORITARIO:
-✅ [Caso crítico 1]
-✅ [Caso crítico 2]
-✅ [Caso crítico 3]
-
-💬 Contacto: [email o método de contacto]
-```
-
-#### **Formato de Release Notes Alternativo (Académico):**
+#### **Formato de Release Notes:**
 ```
 Versión X.X.X – [Título del Release]
 Fecha: DD de Mes, YYYY

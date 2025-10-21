@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1085584299617",
+    "project_id": "fluttercurso-qa",
+    "storage_bucket": "fluttercurso-qa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085584299617:android:6eef7dcbc15a90c83e3c20",
+        "android_client_info": {
+          "package_name": "com.example.grupo_2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCooAo1PAE2RlPF5H4XvtTAxRiWq8FtHKY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

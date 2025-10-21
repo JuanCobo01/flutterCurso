@@ -4,14 +4,7 @@
 Este repositorio contiene el desarrollo de los talleres del curso de Flutter en UCEVA.  
 Incluye implementaciones de UI, navegación, y distribución de aplicaciones móviles.
 
-### 🎯 Taller 1 - Fundamentos de Flutter
-- `AppBar` con título dinámico usando `setState()`
-- Texto centrado con nombre del estudiante
-- Imágenes con `Image.network()` e `Image.asset()`
-- Botón con `ElevatedButton` y `SnackBar`
-- Widgets: `Container`, `ListView`, `Column`, `Padding`
-
-### 🚀 Taller 2 - Distribución con Firebase
+### 🚀 Taller 1 - Distribución con Firebase
 - Configuración de Firebase App Distribution
 - Gestión de versionado y releases
 - Testing con usuarios externos
@@ -53,62 +46,206 @@ El APK se genera en: `build/app/outputs/flutter-apk/app-release.apk`
 ### � Firebase App Distribution
 1. **Configuración del Proyecto**:
    - Application ID: `com.example.grupo_2`
-   - Versión actual: `1.0.1+2`
+   - Versión actual: `1.0.3+4`
 
-2. **Flujo de Distribución**:
-   ```
-   Generar APK → Firebase Console → App Distribution → 
-   Agregar Testers → Subir Release → Distribuir → Instalación
-   ```
+## 📦 Publicación y Distribución
 
-3. **Versionado**:
-   - Formato: `major.minor.patch+buildNumber`
-   - Ejemplo: `1.0.0+1` → `1.0.1+2`
-   - Actualizar en `pubspec.yaml` antes de cada release
+### 🔄 **Flujo de Distribución Completo**
+```
+Generar APK → App Distribution → Testers → Instalación → Actualización
+     ↓              ↓              ↓           ↓            ↓
+1. flutter      2. Firebase    3. Invitar   4. Tester    5. Nueva versión
+   build apk       Console       usuarios     instala      y repetir ciclo
+```
 
-4. **Release Notes Template**:
-   ```
-   🚀 Versión X.X.X - [Título del Release]
-   
-   ✨ Nuevas características:
-   - [Cambio 1]
-   - [Cambio 2]
-   
-   🐛 Correcciones:
-   - [Fix 1]
-   
-   📅 Fecha: DD/MM/YYYY
-   👥 Responsable: [Nombre]
-   ```
+#### **Explicación del Flujo:**
+1. **Generar APK**: Compilar la aplicación para Android en modo release
+2. **App Distribution**: Subir el APK a Firebase App Distribution
+3. **Testers**: Configurar grupos de testing e invitar usuarios
+4. **Instalación**: Los testers reciben el enlace e instalan la app
+5. **Actualización**: Repetir el proceso con nuevas versiones
 
-5. **Grupo de Testers**:
-   - Nombre: `QA_Clase`
-   - Tester principal: `dduran@uceva.edu.co`
+### 📋 **Sección Publicación**
 
-### 📋 Proceso de QA
-1. **Distribución inicial** (v1.0.1)
-2. **Testing en dispositivo físico**
-3. **Actualización incremental** (v1.0.2)
-4. **Verificación del flujo de actualización**
-5. **Documentación de evidencias**
+#### **Pasos Resumidos para Replicar en el Equipo:**
 
-### 📁 Documentación Adicional
-- Ver guía detallada en: [`DISTRIBUCION_FIREBASE.md`](./DISTRIBUCION_FIREBASE.md)
-- Incluye pasos específicos para Firebase Console
-- Templates para Release Notes y Bitácora de QA
-- Buenas prácticas de versionado
+**PASO 1: Preparación del APK**
+```bash
+# 1. Actualizar versión en pubspec.yaml
+version: 1.0.X+Y
 
----
+# 2. Limpiar y generar APK
+flutter clean
+flutter pub get
+flutter build apk --release
+```
 
-## �📷 Capturas de pantalla:
-1. Codigo (Estado inicial y cambio de titulo),2 widgets(Container y ListView):
-<img width="701" height="196" alt="image" src="https://github.com/user-attachments/assets/6ab4726c-8739-4c2d-92f3-552a2d403b30" />
-<br>
-<br>
-<img width="502" height="1009" alt="image" src="https://github.com/user-attachments/assets/fe09fe7b-f752-466a-975d-c4ca1ead9447" />
-<br>
-<br>
-<img width="497" height="1021" alt="image" src="https://github.com/user-attachments/assets/7902d944-0b40-40e7-837f-381202164d26" />
+**PASO 2: Firebase Console Setup**
+1. Ir a [Firebase Console](https://console.firebase.google.com/)
+2. Seleccionar proyecto → App Distribution
+3. Crear grupo de testers: `QA_Clase`
+4. Agregar email del tester: `dduran@uceva.edu.co`
+
+**PASO 3: Distribución**
+1. Subir APK desde: `build/app/outputs/flutter-apk/app-release.apk`
+2. Completar Release Notes (ver formato abajo)
+3. Seleccionar grupo de testers
+4. Hacer clic en "Distribute"
+5. Copiar enlace de instalación
+
+**PASO 4: Verificación**
+1. Confirmar que tester recibe email de invitación
+2. Verificar instalación exitosa en dispositivo Android
+3. Documentar el proceso con capturas de pantalla
+
+#### **Replicación en Equipo:**
+```bash
+# Para que otros miembros del equipo puedan replicar:
+git clone https://github.com/JuanCobo01/flutterCurso.git
+cd flutterCurso
+flutter pub get
+
+# Seguir los pasos 1-4 anteriores
+# Usar el mismo proyecto Firebase
+# Agregar nuevos testers al grupo QA_Clase
+```
+
+### 📊 **Versionado y Release Notes**
+
+#### **Sistema de Versionado:**
+```yaml
+# Formato en pubspec.yaml
+version: MAJOR.MINOR.PATCH+BUILD_NUMBER
+
+# Ejemplos prácticos:
+version: 1.0.2+3  # Correcciones menores
+version: 1.0.3+4  # Nuevas funcionalidades
+```
+
+**Reglas de Incremento:**
+- **MAJOR**: Cambios incompatibles o restructuración completa
+- **MINOR**: Nuevas funcionalidades compatibles
+- **PATCH**: Correcciones de bugs o mejoras menores
+- **BUILD_NUMBER**: Siempre incrementar en cada build
+
+#### **Formato de Release Notes Utilizado:**
+```markdown
+🚀 Versión X.X.X - [Título Descriptivo]
+
+📅 FECHA: DD/MM/YYYY
+👨‍💻 RESPONSABLE: [Nombre del desarrollador]
+📦 TAMAÑO: [XX] MB | 📱 COMPATIBILIDAD: Android 5.0+
+
+✨ NUEVAS FUNCIONALIDADES:
+- 🧮 [Funcionalidad 1] - Descripción breve
+- 📝 [Funcionalidad 2] - Descripción breve
+- 🎲 [Funcionalidad 3] - Descripción breve
+
+� MEJORAS TÉCNICAS:
+- [Mejora 1]: Descripción del impacto
+- [Mejora 2]: Beneficio para el usuario
+
+🐛 ERRORES CORREGIDOS:
+- [Bug 1]: Qué se solucionó
+- [Bug 2]: Mejora implementada
+
+🔧 INSTRUCCIONES DE TESTING:
+1. [Paso específico de prueba]
+2. [Funcionalidad a verificar]
+3. [Escenario de error a probar]
+
+📈 COMPARACIÓN CON VERSIÓN ANTERIOR:
+- Funcionalidades: X → Y
+- Pantallas: X → Y
+- Tamaño APK: XX MB → YY MB
+
+🎯 TESTING PRIORITARIO:
+✅ [Caso crítico 1]
+✅ [Caso crítico 2]
+✅ [Caso crítico 3]
+
+💬 Contacto: [email o método de contacto]
+```
+
+#### **Formato de Release Notes Alternativo (Académico):**
+```
+Versión X.X.X – [Título del Release]
+Fecha: DD de Mes, YYYY
+Responsable: [Nombre Completo] ([Código Estudiante])
+Tamaño: ~XX MB
+Compatibilidad: Android 5.0+ (API 21+)
+Grupo de testing: QA_Clase
+Contacto: [email]
+
+Características Implementadas:
+- [Característica 1]
+- [Característica 2]
+- [Característica 3]
+
+Instrucciones de Prueba:
+- [Instrucción 1]
+- [Instrucción 2]
+- [Instrucción 3]
+
+Estado de Pruebas:
+[Descripción del estado actual y observaciones]
+```
+
+#### **Ejemplos Reales del Proyecto:**
+
+**Ejemplo v1.0.1 - Formato Académico:**
+```
+Versión 1.0.1 – Release Inicial para QA
+Fecha: 20 de Octubre, 2025
+Responsable: Juan David Cobo Aguirre (230221060)
+Tamaño: ~44 MB
+Compatibilidad: Android 5.0+ (API 21+)
+Grupo de testing: QA_Clase
+Contacto: coboaguirrej@gmail.com
+
+Características Implementadas:
+- Interfaz con AppBar dinámico
+- Navegación con go_router
+- Skeleton loading para mejor experiencia de usuario
+- Integración de widgets Container y ListView
+- Imágenes desde network y assets
+
+Instrucciones de Prueba:
+- Abrir la app y verificar correcto inicio
+- Comprobar cambio de título en AppBar
+- Navegar entre pantallas
+- Validar carga correcta de imágenes
+- Reportar errores o comportamientos anómalos
+
+Estado de Pruebas:
+Versión estable para pruebas funcionales iniciales.
+No se detectaron fallos críticos.
+```
+
+**v1.0.1+2 - Release Inicial:**
+- Funcionalidades base del Taller 1
+- AppBar dinámico, imágenes, navegación
+- 5 pantallas principales
+
+**v1.0.3+4 - Expansión de Funcionalidades:**
+- Calculadora, Todo List, Juego de adivinanza
+- Contador persistente, toggle de temas
+- 10 pantallas activas
+
+### 🔧 **Comandos Rápidos para el Equipo**
+```bash
+# Generar APK para distribución
+flutter clean && flutter build apk --release
+
+# Verificar versión actual
+grep "version:" pubspec.yaml
+
+# Ver estructura de archivos APK
+ls -la build/app/outputs/flutter-apk/
+
+# Verificar permisos en AndroidManifest
+cat android/app/src/main/AndroidManifest.xml
+```
 
 ---
 

@@ -13,6 +13,10 @@ dependencies:
   go_router: ^16.2.0 
   cupertino_icons: ^1.0.8
   skeletonizer: ^2.1.0+1
+  firebase_core: ^2.24.0
+  cloud_firestore: ^4.13.3
+  url_launcher: ^6.2.1
+  form_validator: ^2.1.1
 
 dev_dependencies:
   flutter_test:

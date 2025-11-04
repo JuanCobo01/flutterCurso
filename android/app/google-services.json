@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "1085584299617",
-    "project_id": "fluttercurso-qa",
-    "storage_bucket": "fluttercurso-qa.firebasestorage.app"
+    "project_number": "166873146454",
+    "project_id": "electiva-8fb97",
+    "storage_bucket": "electiva-8fb97.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1085584299617:android:6eef7dcbc15a90c83e3c20",
+        "mobilesdk_app_id": "1:166873146454:android:05128fff0f08abc67147f7",
         "android_client_info": {
           "package_name": "com.example.grupo_2"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCooAo1PAE2RlPF5H4XvtTAxRiWq8FtHKY"
+          "current_key": "AIzaSyDiS6pqhUmDaz3VrAxKktzpGoRAyEotTHg"
         }
       ],
       "services": {

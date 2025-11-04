@@ -79,6 +79,13 @@ class HomeScreen extends StatelessWidget {
                     '/timer',
                     Colors.teal,
                   ),
+                  _buildFeatureCard(
+                    context,
+                    '🏛️ Universidades',
+                    'Gestión de universidades',
+                    '/universidades',
+                    Colors.blue,
+                  ),
                 ],
               ),
             ),
@@ -183,6 +190,8 @@ class HomeScreen extends StatelessWidget {
         return Icons.casino;
       case '/counter':
         return Icons.add_circle;
+      case '/universidades':
+        return Icons.school;
       case '/timer':
         return Icons.timer;
       default:
